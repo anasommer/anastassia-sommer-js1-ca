@@ -1,5 +1,4 @@
-const apiKey = `c0bb74b272e24186bad796b6d0217d57`;
-const country = `no`;
-const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}`;
+const apiKey = `yjKq4yraOdoP9mrRWUQAko5lIqBiDeX3`;
+const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${apiKey}`;
 
 console.log(url);
