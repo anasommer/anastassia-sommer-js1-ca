@@ -16,8 +16,7 @@ async function showCoctailDetails() {
     createHtml(drink);
   } catch (error) {
     detailsContainer.classList.remove("lds-default");
-    detailsContainer.classList.add("error");
-    detailsContainer.innerHTML = `<div>Sorry, something went wrong. Try to reload a page.</div>`;
+    detailsContainer.innerHTML = message("error", error);
   }
 }
 

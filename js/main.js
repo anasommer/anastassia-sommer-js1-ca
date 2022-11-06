@@ -11,24 +11,27 @@ async function getData() {
     container.classList.remove("lds-default");
     container.innerHTML = "";
 
-    const drinksToShow = 10;
-
     // display 3 different properties: id, name, image
-    for (let i = 0; i < drinks.length; i++) {
-      if (i === drinksToShow) {
-        break;
-      }
-      container.innerHTML += `<div>
-      <h3> ${i + 1} - <a href="details.html?id=${drinks[i].idDrink}">${
-        drinks[i].strDrink
-      }</a></h3>
-      <img src="${drinks[i].strDrinkThumb}" alt="${drinks[i].strDrink}">
-      </div>`;
-    }
+    createHtml(drinks);
   } catch (error) {
     container.classList.remove("lds-default");
-    container.classList.add("error");
-    container.innerHTML = `<div>Sorry, something went wrong. Try to reload a page.</div>`;
+    container.innerHTML = message(error);
+  }
+}
+
+function createHtml(drinks) {
+  const drinksToShow = 10;
+
+  for (let i = 0; i < drinks.length; i++) {
+    if (i === drinksToShow) {
+      break;
+    }
+    container.innerHTML += `<div>
+    <h3> ${i + 1} - <a href="details.html?id=${drinks[i].idDrink}">${
+      drinks[i].strDrink
+    }</a></h3>
+    <img src="${drinks[i].strDrinkThumb}" alt="${drinks[i].strDrink}">
+    </div>`;
   }
 }
 
