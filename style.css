@@ -8,6 +8,11 @@ ul {
   list-style: none;
 }
 
+.error {
+  background-color: #de8585;
+  width: 30%;
+  margin: 0 auto;
+
 /* Loader from site https://loading.io/css/ */
 
 .lds-default {
