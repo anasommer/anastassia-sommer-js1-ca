@@ -7,17 +7,21 @@ async function getData() {
     const response = await fetch(url);
     const result = await response.json();
     const drinks = result.drinks;
-    console.log(drinks);
 
     container.classList.remove("lds-default");
     container.innerHTML = "";
 
     const drinksToShow = 10;
 
-    //display 3 different properties: author, title, rank(same as id)
-    for (let i = 0; i < drinksToShow; i++) {
+    // display 3 different properties: id, name, image
+    for (let i = 0; i < drinks.length; i++) {
+      if (i === drinksToShow) {
+        break;
+      }
       container.innerHTML += `<div>
-      <h3> ${drinks[i].idDrink} - <a href="details.html?id=${drinks[i].idDrink}">${drinks[i].strDrink}</a></h3>
+      <h3> ${i + 1} - <a href="details.html?id=${drinks[i].idDrink}">${
+        drinks[i].strDrink
+      }</a></h3>
       <img src="${drinks[i].strDrinkThumb}" alt="${drinks[i].strDrink}">
       </div>`;
     }
