@@ -14,3 +14,5 @@ async function getData() {
 }
 
 getData();
+
+// display 3 different properties: author, title, rank(same as id)
