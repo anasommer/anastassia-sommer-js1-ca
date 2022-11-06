@@ -1,17 +1,19 @@
 body {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-ul {
-  list-style: none;
-}
-
 .error {
+  padding: 20px;
   background-color: #de8585;
   width: 30%;
   margin: 0 auto;
+  font-size: 20px;
+}
+img {
+  width: 50%;
+}
 
 /* Loader from site https://loading.io/css/ */
 
