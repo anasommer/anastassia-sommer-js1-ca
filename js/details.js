@@ -39,7 +39,7 @@ function createHtml(drink) {
 
 function createListOfIngredients(drink) {
   const maxNumberOfIngredients = 10;
-  console.log(drink);
+
   let listOfIngredients = "";
 
   for (let i = 1; i < maxNumberOfIngredients; i++) {
