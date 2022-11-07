@@ -22,10 +22,11 @@ async function showCoctailDetails() {
 
 // display 3 different properties: name, image, instructions
 function createHtml(drink) {
-  detailsContainer.classList.remove("lds-default");
-  detailsContainer.innerHTML = "";
+  updateElement(detailsContainer, "lds-default");
+
   document.title = drink.strDrink;
   heading.textContent = `${drink.strDrink}`;
+
   detailsContainer.innerHTML = `<div>
                                     <img src="${drink.strDrinkThumb}" alt="${
     drink.strDrink

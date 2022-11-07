@@ -8,8 +8,7 @@ async function getData() {
     const result = await response.json();
     const drinks = result.drinks;
 
-    container.classList.remove("lds-default");
-    container.innerHTML = "";
+    updateElement(container, "lds-default");
 
     // display 3 different properties: id, name, image
     createHtml(drinks);

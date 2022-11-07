@@ -22,6 +22,41 @@ img {
   width: 50%;
 }
 
+/* Contact page */
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+form {
+  font-size: 18px;
+  width: 50%;
+  margin: 30px auto;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0 5px 0;
+}
+
+.form-error {
+  margin-bottom: 20px;
+  color: #ff0000;
+  display: none;
+}
+
+button {
+  background: rgb(11, 91, 133);
+  border: none;
+  width: 200px;
+  padding: 1rem;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
 /* Loader from site https://loading.io/css/ */
 
 .lds-default {
